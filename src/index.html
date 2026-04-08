@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Library</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Main application container -->
+  <div class="app">
+    <!-- Hero Section -->
+    <header class="hero">
+      <div class="hero-content">
+        <h1 class="hero-title">The Library</h1>
+        <p class="hero-subtitle">Discover your next favorite book</p>
+        <div class="hero-divider"></div>
+        
+        <!-- Search Bar -->
+        <div class="search-container">
+          <input type="text" id="searchInput" class="search-input" placeholder="Search for books by title or author...">
+          <button id="searchBtn" class="search-btn">Search</button>
+        </div>
+        
+        <!-- Sort Options -->
+        <div class="sort-container">
+          <label class="sort-label">Sort by:</label>
+          <select id="sortSelect" class="sort-select">
+            <option value="relevance">Relevance</option>
+            <option value="author_asc">Author (A-Z)</option>
+            <option value="author_desc">Author (Z-A)</option>
+            <option value="year_asc">Year (Oldest first)</option>
+            <option value="year_desc">Year (Newest first)</option>
+            <option value="title_asc">Title (A-Z)</option>
+          </select>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main content area -->
+    <main class="main">
+      <div class="two-column-layout">
+        <!-- Left Column: Search Results -->
+        <div class="main-content">
+          <div id="resultsHeader" class="results-header">
+            <span id="resultsCount"></span>
+          </div>
+          
+          <div id="booksGrid" class="books-grid">
+            <div class="loading" id="loading">
+              <div class="spinner"></div>
+              <p>Searching the library...</p>
+            </div>
+            <div class="empty-state" id="emptyState" style="display: none;">
+              <h3>No books found</h3>
+              <p>Try a different search term</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Favorites Sidebar -->
+        <aside class="favorites-sidebar">
+          <div class="favorites-header">
+            <h2>Favorites</h2>
+            <span id="favoritesCount" class="favorites-badge">0 books</span>
+          </div>
+          
+          <div id="favoritesList" class="favorites-list">
+            <div class="empty-favorites" id="emptyFavorites">
+              <span class="empty-icon">❤️</span>
+              <p>No favorites yet</p>
+              <small>Click the heart icon on any book to save it</small>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <!-- Fotter -->
+    <footer class="footer">
+      <div class="footer-content">
+        <p>The Library © 2026</p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
