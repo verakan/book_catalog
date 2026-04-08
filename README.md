@@ -14,7 +14,7 @@ Core Requirements:
 - npm (v6 or higher)
 ### Installation & Setup
 1. Clone the repository  
-git clone <your-repository-url>  
+git clone https://github.com/verakan/book_catalog.git  
 cd book_catalog
 2. Install dependencies
 npm install
